@@ -1,0 +1,72 @@
+.profile {
+    height: 300px;
+    border-radius: 100%;
+
+}
+
+.pic1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body,
+.pic1 {
+    height: 100%;
+}
+
+.left {
+    width: 100%;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.name {
+    font-size: 3.2rem;
+}
+
+.realtor {
+    font-size: 1rem;
+}
+
+.icons svg {
+    height: 24px;
+}
+
+.testimonial {
+    width: 200px;
+
+}
+
+.house {
+    display: flex;
+    align-items: center;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio {
+    width: 200px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.kw {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kw img {
+    height: 60px;
+}
