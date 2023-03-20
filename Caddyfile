@@ -1,3 +1,7 @@
-:3000 {
-  file_server
+http://localhost:3000 {
+  handle {
+    root * ./
+    try_files {path} /index.html
+    file_server
+  }
 }
