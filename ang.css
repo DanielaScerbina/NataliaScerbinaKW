@@ -1,24 +1,63 @@
 .profile {
-    height: 50px;
+    width: 100%;
+    border-radius: 100%;
 }
 
 .pic1 {
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-@media only screen and (min-width: 1024px)   {
+.house1 {
+    width: 100%;
+}
+
+.name {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.kw {
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.icons svg {
+    height: 100px;
+
+}
+
+.icons {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+.portfolio {
+    padding: .6rem;
+}
+
+.address {
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 1024px) {
     .profile {
         height: 300px;
-        border-radius: 100%;
-    
+
     }
-    
+
     .pic1 {
-        display: flex;
+
         flex-direction: row;
         justify-content: center;
     }
-    
+
     .left {
         width: 100%;
         flex-grow: 1;
@@ -27,56 +66,56 @@
         align-items: center;
         gap: 10px;
     }
-    
+
     .name {
         font-size: 3.2rem;
     }
-    
+
     .realtor {
         font-size: 1rem;
     }
-    
+
     .icons svg {
         height: 24px;
     }
-    
+
     .testimonial {
         width: 200px;
-    
+
     }
-    
+
     .house {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
-    
+
     }
-    
+
     .address {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .portfolio {
         width: 200px;
     }
-    
+
     .column {
         flex-direction: column;
     }
-    
+
     .kw {
         display: flex;
         align-items: center;
         gap: 10px;
     }
-    
+
     .kw img {
         height: 60px;
     }
-    
+
     .house1 {
         height: 300px;
     }
