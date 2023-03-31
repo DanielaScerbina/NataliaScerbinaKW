@@ -1,15 +1,27 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-console.log("colby")
+const input = document.querySelector('#name')
 
-const p = document.getElementById("text")
-console.log(p)
-document.querySelector("button")
+// document.querySelector('#submit').addEventListener('click', () => {
+//     fetch(`http://localhost:3000/hello?name=${input.value}`, {
+//         method: 'POST',
+//     }).then(r => {
+//         r.text().then(t => {
+//             console.log(t)
+//         })
+//     })
+//   })
 
-document.querySelector("button").addEventListener("click",function(){
+document.querySelector('#submit').addEventListener('click', () => {
+    console.log(input.value)
+    fetch('http://localhost:3000/hello?name=' + input.value,{method: 'POST'
 
-    document.querySelector("p").innerText=document.querySelector("input").value
+    }).then(response => {
+        response.text().then(t =>{
+            console.log(t)
+        })
+    })
 })
 
 })

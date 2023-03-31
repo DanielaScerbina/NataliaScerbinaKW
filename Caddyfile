@@ -1,7 +1,16 @@
 http://localhost:3000 {
+
+templates
+
   handle {
     root * ./
     try_files {path} /index.html
     file_server
   }
+
+  handle /hello {
+    respond "hi {query.name}"
+  }
 }
+
+
