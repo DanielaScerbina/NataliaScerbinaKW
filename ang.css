@@ -5,7 +5,8 @@
 }
 
 .img-padding {
-  padding: 2rem;
+  padding: 10rem;
+  padding-bottom: 0px;
 }
 
 .pic1 {
@@ -54,7 +55,7 @@ body {
 
 .portfolio {
   width: 100%;
-  padding: 0.6rem;
+  padding: 2rem;
 }
 
 .address {
@@ -85,12 +86,30 @@ body {
   gap: 1rem;
 }
 
+.card-portfolio {
+  background-color: #0b5555;
+  box-shadow: 0 4px 16px 1px rgba(0, 0, 0, 0.14);
+  border: 1px solid #e9e8e8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .price {
   font-size: 1.75rem;
 }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 .testimonial {
@@ -132,6 +151,14 @@ html {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.realtor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  gap: 35px;
 }
 
 @media only screen and (min-width: 1024px) {
