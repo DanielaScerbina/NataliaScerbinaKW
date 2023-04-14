@@ -68,10 +68,11 @@ nav {
   background-size: contain;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
 }
 
-.profile img {
+.mama-img {
   width: 100%;
   border-radius: 100%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -94,9 +95,84 @@ nav {
 .realtor-btn {
   background-color: #fff;
   color: black;
-  padding: 20px;
-  margin: 4px 2px;
+  padding: 30px 80px;
+  border-radius: 210px;
   text-align: center;
   display: flex;
   align-items: center;
+  font-size: 2rem;
+  text-decoration: none;
+  gap: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-title {
+  font-size: 100px;
+  color: #0b5555;
+  text-align: center;
+  border-bottom: 2px solid #bebebe;
+  padding: 0 10px 20px;
+}
+
+.label-boxes {
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.label {
+  color: black;
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+.input {
+  padding: 25px 25px;
+  border: 1px solid rgba(11, 85, 85, 0.2);
+  box-shadow: 0px 3px 4px rgba(163, 163, 163, 0.44);
+  border-radius: 1rem;
+}
+
+.input,
+input,
+textarea {
+  background: #eeeeee;
+}
+
+.input textarea {
+  height: 250px;
+}
+
+.input input,
+.input textarea {
+  width: 100%;
+  font-size: 2rem;
+  border: none;
+}
+.request {
+  color: #0b5555;
+  font-size: 1.5rem;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn {
+  background: #0b5555;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: white;
+  padding: 50px 80px;
+  margin: 80px;
 }
