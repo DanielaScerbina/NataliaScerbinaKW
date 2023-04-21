@@ -189,6 +189,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .menu-items {
@@ -206,13 +207,13 @@ textarea {
   font-weight: 400;
   color: black;
   font-size: 5rem;
-  border-top: 2px solid #bebebe;
   display: flex;
+
+  border-top: 2px solid #bebebe;
 }
 
 .menu-img {
   width: 100%;
-  border-radius: 100%;
   padding: 50px 20px 20px 20px;
 }
 
@@ -227,4 +228,13 @@ textarea {
 .end-menu {
   display: flex;
   flex-direction: column;
+}
+
+.box {
+
+  padding: 3rem;
+}
+
+.w-full {
+  width: 100%;
 }
