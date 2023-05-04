@@ -24,13 +24,17 @@
       <img src="email.svg" alt="email icon" class="icons" />
       <p class="font-bold">nscerbina@kw.com</p>
       <div class="flex-grow"></div>
-      <img src="hamburger-menu.svg" alt="menu icon" class="menu" />
+      <img src="hamburger-menu.svg" alt="menu icon" class="menu" id="menu" />
 
-      <div class="menu-overlay">
-        <h1 class="menu-items">Contact Me</h1>
-        <h1 class="menu-items">Homes Sold</h1>
-        <h1 class="menu-items">Testimonials</h1>
-
+      <div class="menu-overlay invisible">
+        <div class="img-close">
+          <img src="close.svg" alt="close" class="close" id="close" />
+        </div>
+        <div class="links">
+          <h1 class="menu-items">Contact Me</h1>
+          <h1 class="menu-items">Homes Sold</h1>
+          <h1 class="menu-items">Testimonials</h1>
+        </div>
         <div class="box w-full">
           <div class="menu-footer w-full">
             <div class="w-full">
@@ -38,10 +42,10 @@
             </div>
             <div class="end-menu w-full">
               <p>Natalia Scerbina</p>
-              <div class="kw">
-                <img src="kw-menu.png" alt="kw" />
-                <p>REALTOR ®</p>
-              </div>
+              <a href="https://kw.com/" target="_blank" class="realtor-btn">
+                <img src="kellerwilliams.png" alt="kw" />
+                <p class="whitespace-nowrap">REALTOR ®</p>
+              </a>
             </div>
           </div>
         </div>
@@ -96,10 +100,26 @@
           <input />
         </div>
 
-        <div class="submit">
+        <div class="submit" id="submit">
           <button class="submit-btn font-bold">Submit</button>
         </div>
       </div>
     </div>
+
+    <div class="thankyou invisible" id="thankyou">
+      <div class="img-close">
+        <img src="close.svg" alt="close" class="close" id="close-thank" />
+      </div>
+      <div class="flex-grow">
+        <div class="thank-wrapper">
+          <p class="thank">Thank You!</p>
+          <p class="will-contact">
+            I will contact you as soon as I am available.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
