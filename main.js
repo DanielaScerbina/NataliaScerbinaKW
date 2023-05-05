@@ -20,29 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = document.querySelector("#email");
   sumbitButton.addEventListener("click", () => {
     // thankYouOverlay.classList.remove("invisible")
-    console.dir(name);
-    console.log({
-      name: name.value,
-      msg: message.value,
-      number: number.value,
-      email: email.value,
-    });
+    // console.dir(name);
+    // console.log({
+    //   name: name.value,
+    //   msg: message.value,
+    //   number: number.value,
+    //   email: email.value,
+    // });
 
-    fetch("http://localhost:4000", {
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "text/plain",
-      },
-    })
+    fetch("http://localhost:4000")
       .then((response) => {
         return response
-          .text()
-          .then((text) => {
-            console.log(text);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
+          .json()
+      })
+      .then((t) => {
+        console.log("reeeeee", t);
       })
       .catch((error) => {
         console.error(error);
