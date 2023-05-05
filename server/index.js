@@ -7,15 +7,31 @@ const server = http.createServer((req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
     "*"
-  ); /* @dev First, read about security */
-  res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET");
-  res.setHeader("Access-Control-Max-Age", 2592000); // 30 days
-
-  res.statusCode = 200;
+  );
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
+  res.setHeader("Access-Control-Max-Age", "86400");
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({
-    message: "Hello World"
-  }));
+
+  if (req.method === "POST") {
+    let chunks = "";
+
+    req.on("data", (chunk) => {
+      chunks += chunk.toString();
+    });
+
+    req.on("end", () => {
+      console.log(chunks);
+      res.end(
+        JSON.stringify({
+          message: "thanks",
+          data: JSON.parse(chunks),
+        })
+      );
+    });
+  } else {
+    res.end()
+  }
 });
 
 server.listen(port, hostname, () => {

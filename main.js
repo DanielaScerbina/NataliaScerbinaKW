@@ -21,20 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
   sumbitButton.addEventListener("click", () => {
     // thankYouOverlay.classList.remove("invisible")
     // console.dir(name);
-    // console.log({
-    //   name: name.value,
-    //   msg: message.value,
-    //   number: number.value,
-    //   email: email.value,
-    // });
 
-    fetch("http://localhost:4000")
+    fetch("http://localhost:4000", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name.value,
+        msg: message.value,
+        number: number.value,
+        email: email.value,
+      }),
+    })
       .then((response) => {
-        return response
-          .json()
+        return response.json();
       })
       .then((t) => {
-        console.log("reeeeee", t);
+        console.log(t);
       })
       .catch((error) => {
         console.error(error);
