@@ -187,6 +187,11 @@ textarea {
   margin: 80px;
 }
 
+.submit-btn:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+
 .menu-overlay,
 .thankyou {
   position: fixed;
@@ -287,4 +292,12 @@ textarea {
 
 .invisible {
   display: none;
+}
+
+.error {
+  color: #d42424;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+  font-weight: 500;
 }

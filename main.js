@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const message = document.querySelector("#message");
   const number = document.querySelector("#phone-number");
   const email = document.querySelector("#email");
+  const error = document.querySelector("#form-error");
+
   sumbitButton.addEventListener("click", () => {
-    // thankYouOverlay.classList.remove("invisible")
     // console.dir(name);
+    sumbitButton.setAttribute("disabled", true);
 
     fetch("http://localhost:4000", {
       method: "POST",
@@ -39,12 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then((t) => {
         console.log(t);
+        // makes the thank you page visible when submit button is clicked
+        thankYouOverlay.classList.remove("invisible");
       })
-      .catch((error) => {
-        console.error(error);
+      .catch((err) => {
+        console.error(err);
+        // if theres an error, shows an error message above button
+        error.classList.remove("invisible");
+      })
+      // re enables button after info is submitted
+      .finally(() => {
+        sumbitButton.removeAttribute("disabled");
       });
   });
 
+  // closes the thank you page using the X
   const closeSecButton = document.querySelector("#close-thank");
   closeSecButton.addEventListener("click", () => {
     thankYouOverlay.classList.add("invisible");
