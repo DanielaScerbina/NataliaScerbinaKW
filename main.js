@@ -13,37 +13,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //when click submit, takes to thankyou page, then click X to exit thank you page
   const thankYouOverlay = document.querySelector(".thankyou");
-  const sumbitButton = document.querySelector("#submit");
+  const submitButton = document.querySelector("#submit");
   const name = document.querySelector("#name");
   const message = document.querySelector("#message");
   const number = document.querySelector("#phone-number");
   const email = document.querySelector("#email");
   const error = document.querySelector("#form-error");
 
-  //disables button until text is typed into name input area,
+  //disables button until text is typed into name & message input areas
+  //(the 'required' fields),
+  //and checks if there is text in either the phone or email text area,
   //then enables, then disables again when text is deleted.
-  const nameInputCheck = () => {
-    if (name.value.length === 0) {
-      sumbitButton.setAttribute("disabled", true);
+  const isValid = () => {
+    return (
+      name.value.length > 0 &&
+      message.value.length > 0 &&
+      (email.value.length > 0 || number.value.length > 0)
+    );
+  };
+  const inputCheck = () => {
+    if (isValid()) {
+      submitButton.removeAttribute("disabled");
     } else {
-      sumbitButton.removeAttribute("disabled");
+      submitButton.setAttribute("disabled", true);
     }
   };
-  nameInputCheck();
+  inputCheck();
   name.addEventListener("input", () => {
-    console.log(name.value);
-    nameInputCheck();
+    inputCheck();
   });
 
-  sumbitButton.addEventListener("click", () => {
-    // console.dir(name);
-    sumbitButton.setAttribute("disabled", true);
+  message.addEventListener("input", () => {
+    inputCheck();
+  });
+
+  number.addEventListener("input", () => {
+    inputCheck();
+  });
+
+  email.addEventListener("input", () => {
+    inputCheck();
+  });
+
+  submitButton.addEventListener("click", () => {
+    submitButton.setAttribute("disabled", true);
 
     // replaces word submit on the submit button with an svg of a loading icon
     const loadingImg = document.createElement("img");
     loadingImg.setAttribute("src", "./bubble-loading.svg");
-    sumbitButton.innerHTML = "";
-    sumbitButton.appendChild(loadingImg);
+    submitButton.innerHTML = "";
+    submitButton.appendChild(loadingImg);
 
     fetch("http://localhost:4000", {
       method: "POST",
@@ -73,8 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       .finally(() => {
         // re enables button after info is submitted
-        sumbitButton.removeAttribute("disabled");
-        sumbitButton.innerHTML = "Submit";
+        submitButton.removeAttribute("disabled");
+        submitButton.innerHTML = "Submit";
       });
   });
 
