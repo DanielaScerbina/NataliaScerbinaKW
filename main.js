@@ -20,9 +20,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = document.querySelector("#email");
   const error = document.querySelector("#form-error");
 
+  //disables button until text is typed into name input area,
+  //then enables, then disables again when text is deleted.
+  const nameInputCheck = () => {
+    if (name.value.length === 0) {
+      sumbitButton.setAttribute("disabled", true);
+    } else {
+      sumbitButton.removeAttribute("disabled");
+    }
+  };
+  nameInputCheck();
+  name.addEventListener("input", () => {
+    console.log(name.value);
+    nameInputCheck();
+  });
+
   sumbitButton.addEventListener("click", () => {
     // console.dir(name);
     sumbitButton.setAttribute("disabled", true);
+
+    // replaces word submit on the submit button with an svg of a loading icon
+    const loadingImg = document.createElement("img");
+    loadingImg.setAttribute("src", "./bubble-loading.svg");
+    sumbitButton.innerHTML = "";
+    sumbitButton.appendChild(loadingImg);
 
     fetch("http://localhost:4000", {
       method: "POST",
@@ -49,9 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // if theres an error, shows an error message above button
         error.classList.remove("invisible");
       })
-      // re enables button after info is submitted
+
       .finally(() => {
+        // re enables button after info is submitted
         sumbitButton.removeAttribute("disabled");
+        sumbitButton.innerHTML = "Submit";
       });
   });
 
