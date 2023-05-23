@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = document.querySelector("#email");
   const error = document.querySelector("#form-error");
 
-  //disables button until text is typed into name & message input areas
-  //(the 'required' fields),
-  //and checks if there is text in either the phone or email text area,
-  //then enables, then disables again when text is deleted.
+  /*disables button until text is typed into name & message input 
+  areas (the 'required' fields),and checks if there is text in 
+  either the phone or email text area,then enables, 
+  then disables again when text is deleted.*/
   const isValid = () => {
     return (
       name.value.length > 0 &&
