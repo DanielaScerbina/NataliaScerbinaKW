@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const number = document.querySelector("#phone-number");
   const email = document.querySelector("#email");
   const error = document.querySelector("#form-error");
+  const form = document.querySelector("#contactForm");
+
+  /* can exit hamburger menu and thank you pages using the
+  esc key*/
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      menuOverlay.classList.add("invisible");
+      thankYouOverlay.classList.add("invisible");
+    }
+  });
 
   /*disables button until text is typed into name & message input 
   areas (the 'required' fields),and checks if there is text in 
@@ -55,7 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
     inputCheck();
   });
 
-  submitButton.addEventListener("click", () => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
     submitButton.setAttribute("disabled", true);
 
     // replaces word submit on the submit button with an svg of a loading icon
@@ -64,23 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.innerHTML = "";
     submitButton.appendChild(loadingImg);
 
-    fetch("http://localhost:4000", {
+    fetch("/", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: name.value,
-        msg: message.value,
-        number: number.value,
-        email: email.value,
-      }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
     })
-      .then((response) => {
-        return response.json();
-      })
-      .then((t) => {
-        console.log(t);
+      .then(() => {
         // makes the thank you page visible when submit button is clicked
         thankYouOverlay.classList.remove("invisible");
       })

@@ -66,19 +66,19 @@
     <div class="contact">
       <h1 class="contact-title font-bold">Contact me</h1>
 
-      <div class="label-boxes">
+      <form class="label-boxes" id="contactForm" name="form" netlify>
         <div class="label font-bold">
           <p>Name</p>
         </div>
         <div class="input">
-          <input id="name" />
+          <input id="name" name="name" />
         </div>
 
         <div class="label font-bold">
           <p>Message</p>
         </div>
         <div class="input">
-          <textarea id="message"></textarea>
+          <textarea id="message" name="message"></textarea>
         </div>
 
         <p class="request font-bold">
@@ -90,23 +90,25 @@
           <p>Phone Number</p>
         </div>
         <div class="input">
-          <input id="phone-number" />
+          <input id="phone-number" name="number" />
         </div>
 
         <div class="label font-bold">
           <p>E-mail Address</p>
         </div>
         <div class="input">
-          <input id="email" />
+          <input id="email" name="email" />
         </div>
 
         <div class="invisible error" id="form-error">
           An error has occured. Please try again.
         </div>
         <div class="submit">
-          <button class="submit-btn font-bold" id="submit">Submit</button>
+          <button class="submit-btn font-bold" id="submit" type="submit">
+            Submit
+          </button>
         </div>
-      </div>
+      </form>
     </div>
 
     <div class="thankyou invisible" id="thankyou">
