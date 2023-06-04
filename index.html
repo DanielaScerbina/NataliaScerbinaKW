@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="”UTF-8”" />
-    <meta
-      name="”viewport”"
-      content="”width"
-      ="device-width,"
-      initial-scale="1”"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link
       rel="stylesheet"
@@ -20,11 +15,15 @@
     <nav>
       <img src="phone.svg" alt="phone icon" class="icons" />
       <p class="font-bold">417-323-2876</p>
-      <div class="dot">&middot;</div>
+      <div>&middot;</div>
       <img src="email.svg" alt="email icon" class="icons" />
       <p class="font-bold">nscerbina@kw.com</p>
       <div class="flex-grow"></div>
       <img src="hamburger-menu.svg" alt="menu icon" class="menu" id="menu" />
+
+      <div>
+        <h3 class="cnct-btn">Contact Me</h3>
+      </div>
 
       <div class="menu-overlay invisible">
         <div class="img-close">
@@ -33,7 +32,6 @@
         <div class="links">
           <h1 class="menu-items">Contact Me</h1>
           <h1 class="menu-items">Homes Sold</h1>
-          <h1 class="menu-items">Testimonials</h1>
         </div>
         <div class="box w-full">
           <div class="menu-footer w-full">
@@ -43,7 +41,7 @@
             <div class="end-menu w-full">
               <p>Natalia Scerbina</p>
               <a href="https://kw.com/" target="_blank" class="realtor-btn">
-                <img src="kellerwilliams.png" alt="kw" />
+                <img src="kellerwilliams.png" alt="kw" class="kwimg" />
                 <p class="whitespace-nowrap">REALTOR ®</p>
               </a>
             </div>
@@ -51,79 +49,6 @@
         </div>
       </div>
     </nav>
-
-    <div class="profile">
-      <div class="img-container">
-        <img src="mama.jpeg" class="mama-img" />
-      </div>
-      <h1 class="name">Natalia Scerbina</h1>
-      <a href="https://kw.com/" target="_blank" class="realtor-btn font-bold">
-        <img src="kellerwilliams.png" alt="kw" />
-        <p>REALTOR ®</p>
-      </a>
-    </div>
-
-    <div class="contact">
-      <h1 class="contact-title font-bold">Contact me</h1>
-
-      <form class="label-boxes" id="contactForm" name="form" netlify>
-        <div class="label font-bold">
-          <p>Name</p>
-        </div>
-        <div class="input">
-          <input id="name" name="name" />
-        </div>
-
-        <div class="label font-bold">
-          <p>Message</p>
-        </div>
-        <div class="input">
-          <textarea id="message" name="message"></textarea>
-        </div>
-
-        <p class="request font-bold">
-          Please leave either your phone number or email address, and I will
-          respond as soon as possible.
-        </p>
-
-        <div class="label font-bold">
-          <p>Phone Number</p>
-        </div>
-        <div class="input">
-          <input id="phone-number" name="number" />
-        </div>
-
-        <div class="label font-bold">
-          <p>E-mail Address</p>
-        </div>
-        <div class="input">
-          <input id="email" name="email" />
-        </div>
-
-        <div class="invisible error" id="form-error">
-          An error has occured. Please try again.
-        </div>
-        <div class="submit">
-          <button class="submit-btn font-bold" id="submit" type="submit">
-            Submit
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <div class="thankyou invisible" id="thankyou">
-      <div class="img-close">
-        <img src="close.svg" alt="close" class="close" id="close-thank" />
-      </div>
-      <div class="flex-grow">
-        <div class="thank-wrapper">
-          <p class="thank">Thank You!</p>
-          <p class="will-contact">
-            I will contact you as soon as I am available.
-          </p>
-        </div>
-      </div>
-    </div>
 
     <script src="main.js"></script>
   </body>
