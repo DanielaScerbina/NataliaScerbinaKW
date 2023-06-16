@@ -28,9 +28,57 @@
       </div>
       <h1 class="name">Natalia Scerbina</h1>
       <a href="https://kw.com/" target="_blank" class="realtor-btn font-bold">
-        <img src="kellerwilliams.png" alt="kw" />
+        <img src="kellerwilliams.png" alt="kw" class="kw-img" />
         <p>REALTOR ®</p>
       </a>
+    </div>
+
+    <div class="contact">
+      <h1 class="contact-title font-bold">Contact me</h1>
+
+      <form class="label-boxes" id="contactForm" name="form" netlify>
+        <div class="label font-bold">
+          <p>Name</p>
+        </div>
+        <div class="input">
+          <input id="name" name="name" />
+        </div>
+
+        <div class="label font-bold">
+          <p>Message</p>
+        </div>
+        <div class="input">
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <p class="request font-bold">
+          Please leave either your phone number or email address, and I will
+          respond as soon as possible.
+        </p>
+
+        <div class="label font-bold">
+          <p>Phone Number</p>
+        </div>
+        <div class="input">
+          <input id="phone-number" name="number" />
+        </div>
+
+        <div class="label font-bold">
+          <p>E-mail Address</p>
+        </div>
+        <div class="input">
+          <input id="email" name="email" />
+        </div>
+
+        <div class="invisible error" id="form-error">
+          An error has occured. Please try again.
+        </div>
+        <div class="submit">
+          <button class="submit-btn font-bold" id="submit" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
 
     <script src="main.js"></script>
