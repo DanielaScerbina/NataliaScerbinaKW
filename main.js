@@ -1,5 +1,6 @@
-//when click submit, takes to thankyou page, then click X to exit thank you page
 const thankYouOverlay = document.querySelector(".thankyou");
+const contactMe = document.querySelector(".cnct-btn");
+const contactMeForm = document.getElementById("contactMeForm");
 const submitButton = document.querySelector("#submit");
 const custName = document.querySelector("#name");
 const message = document.querySelector("#message");
@@ -7,6 +8,10 @@ const number = document.querySelector("#phone-number");
 const email = document.querySelector("#email");
 const error = document.querySelector("#form-error");
 const form = document.querySelector("#contactForm");
+
+contactMe.addEventListener("click", () => {
+  contactMeForm.scrollIntoView();
+});
 
 /* can exit thank you page using the esc key*/
 document.addEventListener("keydown", (e) => {
