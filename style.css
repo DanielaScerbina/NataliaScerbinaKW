@@ -43,21 +43,6 @@ nav {
   height: 1rem;
 }
 
-.thankyou {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: white;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-}
-
 .cnct-btn {
   font-weight: 500;
   font-size: 1rem;
@@ -67,26 +52,6 @@ nav {
 
 .cnct-btn:hover {
   cursor: pointer;
-}
-
-.img-close {
-  padding-top: 120px;
-  padding-right: 25px;
-  align-self: flex-end;
-}
-
-.close {
-  height: 2rem;
-}
-
-.thank {
-  color: #0b5555;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 2.5rem;
-  text-align: center;
-  border-bottom: 2px solid #bebebe;
-  padding: 125px 70px 20px 70px;
 }
 
 .w-full {
@@ -225,4 +190,74 @@ textarea {
   color: white;
   padding: 25px 40px;
   margin: 40px;
+}
+
+.submit-btn:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d42424;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.thankyou {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.invisible {
+  display: none;
+}
+
+.img-close {
+  padding-top: 120px;
+  padding-right: 25px;
+  align-self: flex-end;
+}
+
+.close {
+  height: 2rem;
+}
+
+.thank-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 386px;
+}
+
+.thank {
+  color: #0b5555;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: center;
+  border-bottom: 2px solid #bebebe;
+  padding: 125px 70px 20px 70px;
+}
+
+.will-contact {
+  color: #0b5555;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
