@@ -261,3 +261,22 @@ textarea {
   padding-left: 100px;
   padding-right: 100px;
 }
+
+@media (min-width: 950px) {
+  body {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (min-width: 1650px) {
+  body {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  form {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
